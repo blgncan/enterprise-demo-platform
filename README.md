@@ -1,2 +1,4 @@
 # enterprise-demo-platform
-Enterprise-grade Full Stack application built with Java,Spring Boot and React.
+
+Enterprise-grade Full Stack application built with Java, Spring Boot, React, and PostgreSQL.
+
