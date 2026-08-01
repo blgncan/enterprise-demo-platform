@@ -1,18 +1,23 @@
 package com.blgncan.enterprise.api.entity;
 
 import jakarta.persistence.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 
 @Entity
-@Table(name = "Departments")
+@Getter
+@Setter
+@Table(name = "departments")
 public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = true, length = 100,unique = true)
+    @Column(nullable = false, length = 100,unique = true)
     private String name;
 
     @Column(length = 500)
@@ -24,7 +29,7 @@ public class Department {
     @Column(nullable = false,updatable = false)
     private LocalDateTime createdDate;
 
-    @Column(nullable = false,updatable = false)
+    @Column(nullable = false)
     private LocalDateTime updatedDate;
 
 
@@ -35,7 +40,10 @@ public class Department {
     @PrePersist
     public void prePersist()
     {
-        this.createdDate = LocalDateTime.now();
+        LocalDateTime now = LocalDateTime.now();
+
+        this.createdDate = now;
+        this.updatedDate = now;
     }
     @PreUpdate
     public void preUpdate()
