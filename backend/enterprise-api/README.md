@@ -7,6 +7,9 @@
 ![License](https://img.shields.io/badge/License-MIT-success)
 
 # Enterprise Demo Platform
+## 📸 Project Preview
+
+![Project Overview](screenshots/project-overview.png)
 
 A modern enterprise backend application built with Java, Spring Boot and PostgreSQL.
 
