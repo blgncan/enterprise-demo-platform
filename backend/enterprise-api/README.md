@@ -14,6 +14,26 @@ This project is being developed to demonstrate real-world enterprise software ar
 
 ---
 
+## Getting Started
+
+Clone repository
+
+```bash
+git clone https://github.com/blgncan/enterprise-demo-platform.git
+```
+
+Go to project
+
+```bash
+cd enterprise-api
+```
+
+Run
+
+```bash
+mvn spring-boot:run
+```
+
 ## 🚀 Technologies
 
 - Java 21
@@ -94,11 +114,15 @@ PostgreSQL
 
 ### Employee Module
 
-- Create Employee
-- Get Employee
-- Get All Employees
-- Update Employee
-- Delete Employee
+✔ Create Employee
+
+✔ Get Employee
+
+✔ Get All Employees
+
+✔ Update Employee
+
+✔ Delete Employee
 
 ---
 
@@ -109,7 +133,9 @@ PostgreSQL
 POST
 
 ```
-/api/departments
+### Create Department
+
+POST `/api/departments`
 ```
 
 Request
@@ -128,6 +154,7 @@ Request
 POST
 
 ```
+### Create Employee
 /api/employees
 ```
 
@@ -178,7 +205,7 @@ Database Engine
 Main Tables
 
 - departments
-- employee
+- employees
 
 ---
 
@@ -204,3 +231,6 @@ Bilgin Can
 Senior Full Stack Developer
 
 Java | Spring Boot | React | PostgreSQL
+
+LinkedIn:
+https://www.linkedin.com/in/bilgincann/

@@ -1,25 +1,27 @@
-Enterprise Architecture
+# Enterprise Architecture
 
-1. Controller Layer
+The project follows a layered architecture to ensure maintainability, scalability and separation of concerns.
 
-Responsible for REST endpoints.
+## Controller Layer
 
-2. Service Layer
+Responsible for handling incoming HTTP requests and returning REST responses.
 
-Contains business logic.
+## Service Layer
 
-3. Repository Layer
+Contains business logic and coordinates application workflows.
 
-Data access using Spring Data JPA.
+## Repository Layer
 
-4. Database
+Handles data access using Spring Data JPA.
 
-PostgreSQL
+## Database
 
-5. DTO
+PostgreSQL is used as the relational database.
 
-Used for request/response mapping.
+## DTO Layer
 
-6. Mapper
+DTOs are used to separate API models from persistence models.
 
-Implemented using MapStruct.
+## Mapper Layer
+
+MapStruct is used for automatic object mapping between DTOs and entities.
