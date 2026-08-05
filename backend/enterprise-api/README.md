@@ -1,9 +1,6 @@
 ![Java](https://img.shields.io/badge/Java-21-orange)
-
 ![Spring Boot](https://img.shields.io/badge/SpringBoot-4.0-green)
-
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)
-
 ![License](https://img.shields.io/badge/License-MIT-success)
 
 # Enterprise Demo Platform
@@ -24,10 +21,10 @@ This project is being developed to demonstrate real-world enterprise software ar
 - Spring Data JPA
 - PostgreSQL
 - MapStruct
+- Bean Validation
 - Lombok
 - Maven
 - REST API
-- Bean Validation
 
 ---
 
@@ -46,15 +43,54 @@ enterprise-api
 
 ---
 
-## Features
+
+## Current Features
+
+✔ RESTful CRUD APIs
+
+✔ Layered Architecture
+
+✔ DTO Pattern
+
+✔ MapStruct Object Mapping
+
+✔ Bean Validation
+
+✔ Global Exception Handling
+
+✔ PostgreSQL Integration
+
+✔ Maven Project Structure
+
+## Architecture
+
+This project follows a layered architecture.
+
+Controller
+
+↓
+
+Service
+
+↓
+
+Repository
+
+↓
+
+PostgreSQL
 
 ### Department Module
 
-- Create Department
-- Get Department
-- Get All Departments
-- Update Department
-- Delete Department
+✔ Create Department
+
+✔ Get Department
+
+✔ Get All Departments
+
+✔ Update Department
+
+✔ Delete Department
 
 ### Employee Module
 
@@ -111,12 +147,11 @@ POST
 
 Bean Validation is used.
 
-Examples
+Implemented validations
 
-- Name is required
-- Description is required
-- Email format
+- Required fields
 - Maximum field lengths
+- Email format validation
 
 ---
 
@@ -136,9 +171,11 @@ Example response
 
 ## Database
 
-PostgreSQL
+Database Engine
 
-Main tables
+- PostgreSQL
+
+Main Tables
 
 - departments
 - employee
@@ -151,14 +188,13 @@ Main tables
 - Role Based Authorization
 - Swagger / OpenAPI
 - Docker
-- Unit Tests
-- Integration Tests
 - Pagination
 - Sorting
 - Filtering
-- Audit Logging
+- Unit Tests
+- Integration Tests
 - CI/CD
-
+- Audit Logging
 ---
 
 ## Author
@@ -167,4 +203,4 @@ Bilgin Can
 
 Senior Full Stack Developer
 
-Java • Spring Boot • React • PostgreSQL
+Java | Spring Boot | React | PostgreSQL
