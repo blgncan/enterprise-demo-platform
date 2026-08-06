@@ -162,7 +162,7 @@ POST
 {
   "firstName": "Bilgin",
   "lastName": "Can",
-  "email": "bilgin@example.com",
+  "email": "bilgin@gmail.com",
   "salary": "75000",
   "departmentId": 1
 }
