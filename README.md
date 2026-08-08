@@ -16,11 +16,26 @@ This project is being developed to demonstrate real-world enterprise software ar
 
 ## Getting Started
 
-Clone repository
+### Configuration
 
-```bash
-git clone https://github.com/blgncan/enterprise-demo-platform.git
+The project includes an example configuration file:
+
+```text
+backend/enterprise-api/src/main/resources/application-example.properties
 ```
+
+Copy this file and rename it to:
+
+```text
+backend/enterprise-api/src/main/resources/application.properties
+```
+
+Then update the database username and password according to your local PostgreSQL configuration.
+
+The `application.properties` file is excluded from Git because it may contain sensitive environment-specific configuration.
+
+Do not commit database passwords or other sensitive credentials to the repository.
+
 
 Go to project
 
@@ -135,7 +150,8 @@ POST
 ```
 ### Create Department
 
-POST `/api/departments`
+**POST** `/api/departments`
+
 ```
 
 Request
@@ -155,15 +171,15 @@ POST
 
 ```
 ### Create Employee
-/api/employees
+**POST** `/api/employees`
 ```
 
 ```json
 {
   "firstName": "Bilgin",
   "lastName": "Can",
-  "email": "bilgin@gmail.com",
-  "salary": "75000",
+  "email": "blgncan@gmail.com",
+  "salary": 75000,
   "departmentId": 1
 }
 ```
