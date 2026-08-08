@@ -10,15 +10,36 @@ import java.util.Date;
 
 @Service
 public class JwtService {
-    private final SecretKey key= Keys.secretKeyFor(SignatureAlgorithm.HS256);
+
+    private final SecretKey key =
+            Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
     public String generateToken(String username) {
 
         return Jwts.builder()
                 .subject(username)
                 .issuedAt(new Date())
-                .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
+                .expiration(
+                        new Date(System.currentTimeMillis() + 1000 * 60 * 60)
+                )
                 .signWith(key)
                 .compact();
+    }
+
+    public String extractUsername(String token) {
+
+        return Jwts.parser()
+                .verifyWith(key)
+                .build()
+                .parseSignedClaims(token)
+                .getPayload()
+                .getSubject();
+    }
+
+    public boolean isTokenValid(String token, String username) {
+
+        String extractedUsername = extractUsername(token);
+
+        return extractedUsername.equals(username);
     }
 }
